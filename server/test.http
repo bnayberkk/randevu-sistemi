@@ -1,0 +1,20 @@
+POST http://localhost:3000/api/customers
+Content-Type: application/json
+
+{
+    "name": "test",
+    "phone": "111111111",
+    "balance": 150.0
+}
+### 
+### 1. Mevcut Ayarları Kontrol Et (Dükkan türü ne, hangi modüller açık?)
+GET http://localhost:3000/api/settings
+
+### 2. Ayarları Güncelle (Örn: Esnaf berber olsun ve randevu sistemini açsın)
+POST http://localhost:3000/api/settings
+Content-Type: application/json
+
+{
+    "key": "feature_appointments",
+    "value": true
+}
